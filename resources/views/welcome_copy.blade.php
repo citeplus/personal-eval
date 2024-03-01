@@ -6,7 +6,7 @@
         <title>Personal</title>
     </head>
     <body>
-        @livewire('hello-word')
+        @livewire('todos')
     </body>
 
 </html>
