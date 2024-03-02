@@ -12,5 +12,12 @@ About properties, on a htlm input add wire-model="myvar" to dymicaly render this
 after some action do in your component php file, $this->reset('myvar'); to reset it into its first value
 on your blade component, you can call any public function of your php component in a wire-event like click, mouseleave etc
  wire:model.live.debounce.1000ms='todo' this one sync values each 1s interval when you interact with (wire:click)
+
 Lifecycle hooks
 the mount function in the component php file is called every time the component is mounted. It can be used to setup the application
+
+Page component 
+make a livewire layout page with php artisan livewire:layout
+your components will be rendered in the $slot
+@class(['current' => request()->is('counter')] to add class attribute with value 'current' if request name is counter
+render directement a component from route web.php
