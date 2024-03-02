@@ -1,0 +1,16 @@
+Installation
+composer require livewire/livewire
+Create a component
+php artisan make:livewire hello-word
+this will create to files
+- App\Livewire\HelloWord and resources/views/livewire/hello-word.blade.php
+<button wire:click="$refresh">Refresh</button> 
+this button refresh magicaly the component on a click
+
+About properties, on a htlm input add wire-model="myvar" to dymicaly render this method
+
+after some action do in your component php file, $this->reset('myvar'); to reset it into its first value
+on your blade component, you can call any public function of your php component in a wire-event like click, mouseleave etc
+ wire:model.live.debounce.1000ms='todo' this one sync values each 1s interval when you interact with (wire:click)
+Lifecycle hooks
+the mount function in the component php file is called every time the component is mounted. It can be used to setup the application
