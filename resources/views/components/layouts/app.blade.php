@@ -23,6 +23,7 @@
                 <a class="nav-link {{ request()->is('/') ? 'active' : ''}}" aria-current="page" href="/">Todos</a>
                 <a class="nav-link {{ request()->is('counter') ? 'active' : ''}}" aria-current="page" href="/counter">Counter</a>
                 <a class="nav-link {{ request()->is('show-posts') ? 'active' : ''}}" aria-current="page" href="/show-posts">Posts</a>
+                <a class="nav-link {{ request()->is('create-post') ? 'active' : ''}}" aria-current="page" href="/create-post">Create post</a>
               </div>
             </div>
           </div>
