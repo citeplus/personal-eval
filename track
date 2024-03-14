@@ -21,3 +21,11 @@ make a livewire layout page with php artisan livewire:layout
 your components will be rendered in the $slot
 @class(['current' => request()->is('counter')] to add class attribute with value 'current' if request name is counter
 render directement a component from route web.php
+
+Testing
+to generate a test file for the CreatePost component
+$php artisan make:livewire create-post --test
+vendor/bin/phpunit tests/Feature/Livewire/CreatePostTest.php  to test the file generated
+pour simuler un erreur de test on peut appeler abort(404) dans une fonction mount dans le component 
+preceder chaque fonction de test avec le decorateur @test, et on pourrait le faire avec un browser test afin de simuler 
+le javascript dans les vues
